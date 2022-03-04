@@ -1,0 +1,28 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Warehouse Data</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Warehouse Name</th>
+            <th>Warehouse Address</th>
+            <th>Warehouse Phone</th>
+          </tr>   
+        </thead>
+        <tbody >
+          <tr *ngFor="let w of warehouse | async">
+            <td>{{ w.warehouseName }}</td>
+            <td>{{ w.warehouseAddress }}</td>
+            <td>{{ w.warehousePhone }}</td>
+            <td>
+              <button (click)="goToDetail(w.id)" class="btn btn-outline-info" style="margin-right: 10px;">Detail</button>
+              <button (click)="goToEdit(w.id)" class="btn btn-outline-warning"style="margin-right: 10px;">Edit</button>
+              <button (click)="deleteWarehouse(w.id)" class="btn btn-outline-danger">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

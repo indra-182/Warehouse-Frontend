@@ -1,0 +1,95 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example"
+  *ngIf="authenticationService.isAuthenticated">
+  <div class="container-fluid">
+    <a class="" routerLink="dashboard">
+      <img src="../assets/image/warehouse (4).png" alt="">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
+      aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample04">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown"
+            aria-expanded="false">Goods</a>
+          <ul class="dropdown-menu" aria-labelledby="dropdown04">
+            <li><a routerLink="goods" class="dropdown-item" routerLinkActive="active">List of Goods</a></li>
+            <li><a routerLink="add" class="dropdown-item" routerLinkActive="active">Add Goods</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown"
+            aria-expanded="false">Warehouse</a>
+          <ul class="dropdown-menu" aria-labelledby="dropdown04">
+            <li><a routerLink="warehouse" class="dropdown-item" routerLinkActive="active">List of Warehouse</a></li>
+            <li><a routerLink="addWarehouse" class="dropdown-item" routerLinkActive="active">Add Warehouse</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown"
+            aria-expanded="false">Store</a>
+          <ul class="dropdown-menu" aria-labelledby="dropdown04">
+            <li><a routerLink="store" class="dropdown-item" routerLinkActive="active">List of Store</a></li>
+            <li><a routerLink="addStore" class="dropdown-item" routerLinkActive="active">Add Store</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown"
+            aria-expanded="false">Supplier</a>
+          <ul class="dropdown-menu" aria-labelledby="dropdown04">
+            <li><a routerLink="supplier" class="dropdown-item" routerLinkActive="active">List of Supplier</a></li>
+            <li><a routerLink="addSupplier" class="dropdown-item" routerLinkActive="active">Add Supplier</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown"
+            aria-expanded="false">Transactions</a>
+          <ul class="dropdown-menu" aria-labelledby="dropdown04">
+            <li><a routerLink="goodsWarehouse" class="dropdown-item" routerLinkActive="active">Register Product to
+                Warehouse</a></li>
+            <li><a routerLink="sup2ware" class="dropdown-item" routerLinkActive="active">Suplier to Warehouse</a></li>
+            <li><a routerLink="ware2ware" class="dropdown-item" routerLinkActive="active">Warehouse to Warehouse</a>
+            </li>
+            <li><a routerLink="ware2store" class="dropdown-item" routerLinkActive="active">Warehouse to Store</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a routerLink="goodsWarehouseList" class="nav-link" routerLinkActive="active">Warehouse Inventory</a>
+        </li>
+
+        <li class="nav-item">
+          <a routerLink="report" class="nav-link" routerLinkActive="active">Report All Transactions</a>
+        </li>
+
+      </ul>
+      <ul class="navbar-nav justify-content-end">
+        <li class="nav-item">
+          <a (click)="logout()" href="#" class="nav-link" routerLinkActive="active">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <br>
+  <h2 style="text-align: center;">{{ title }}</h2>
+  <div class="card">
+    <div class="card-body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <span>© 2021 Team 3 Production</span>
+  </div>
+</footer>

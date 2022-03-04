@@ -1,0 +1,29 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>All Transactions</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Delivery Date</th>
+            <th>Goods Quantity</th>
+            <th>Type</th>
+            <th>From</th>
+            <th>To</th>
+            <th>  </th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr *ngFor="let r of reporting | async">
+            <td>{{ r.date}}</td>
+            <td>{{ r.quantity }}</td>
+            <td>{{ r.type }}</td>
+            <td>{{ r.to }}</td>
+            <td>{{ r.from }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

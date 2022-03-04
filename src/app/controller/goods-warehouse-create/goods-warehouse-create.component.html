@@ -1,0 +1,20 @@
+<h3>Register Goods to Warehouse</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="submit()">
+    <div class="form-group">
+      <label>Warehouse</label>
+      <select class="form-control" [(ngModel)]="details.warehouseId" name="warehouseId" required>
+        <option *ngFor="let w of warehouse" [ngValue]="w.id">{{w.warehouseName}}</option>
+      </select>
+      <!--<p>{{ selected }}</p>-->
+    </div>
+    <div class="form-group">
+      <label>Goods</label>
+      <select class="form-control" [(ngModel)]="details.goodsId" name="goodsId" required>
+        <option *ngFor="let g of goods" [ngValue]="g.id">{{g.goodsName}}</option>
+      </select>
+    </div>
+    <br>
+    <button  type="submit" class="btn btn-outline-success" >Add</button>
+  </form>
+</div>

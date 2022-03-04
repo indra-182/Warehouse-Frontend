@@ -1,0 +1,31 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Goods Data</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Goods Code</th>
+            <th>Goods Name</th>
+            <th>Goods Stock</th>
+            <th>Goods Price</th>
+            <th>  </th>
+          </tr>   
+        </thead>
+        <tbody >
+          <tr *ngFor="let g of goods | async">
+            <td>{{ g.goodsCode }}</td>
+            <td>{{ g.goodsName }}</td>
+            <td>{{ g.goodsStock }}</td>
+            <td>{{ g.goodsPrice }}</td>
+            <td>
+              <button (click)="goToDetail(g.id)" class="btn btn-outline-info"style="margin-right: 10px;">Detail</button>
+              <button (click)="goToEdit(g.id)" class="btn btn-outline-warning"style="margin-right: 10px;">Edit</button>
+              <button (click)="deleteGoods(g.id)" class="btn btn-outline-danger">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

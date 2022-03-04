@@ -1,0 +1,26 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Warehouse Stock List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Warehouse</th>
+          <th>Address</th>
+          <th>Goods</th>
+          <th>Stock</th>
+          <th>  </th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr *ngFor="let g of details | async">
+          <td>{{ g.warehouseName }}</td>
+          <td>{{ g.warehouseAddress }}</td>
+          <td>{{ g.goodsName }}</td>
+          <td>{{ g.goodsStock }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<h3>Update Goods Data</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Goods Code</label>
+      <input type="text" class="form-control" name="goodsCode" [(ngModel)]="goods.goodsCode" required>
+    </div>
+
+    <div class="form-group">
+      <label>Goods Name</label>
+      <input type="text" class="form-control" name="goodsName" [(ngModel)]="goods.goodsName" required>
+    </div>
+
+    <div class="form-group">
+        <label>Price</label>
+        <input type="number" class="form-control" name="goodsPrice"  [(ngModel)]="goods.goodsPrice" required>
+      </div>
+
+    <br>
+    <button type="submit" class="btn btn-outline-success">Submit</button>
+  </form>
+</div>

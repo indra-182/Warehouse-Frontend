@@ -1,0 +1,18 @@
+<h3>Update Supplier Data</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Supplier Name</label>
+      <input type="text" class="form-control" name="supplierName" [(ngModel)]="supplier.supplierName" required>
+    </div>
+
+    <div class="form-group">
+      <label>Supplier Phone Number</label>
+      <input type="text" class="form-control" name="supplierPhone" [(ngModel)]="supplier.supplierPhone" required>
+    </div>
+
+    <br>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+

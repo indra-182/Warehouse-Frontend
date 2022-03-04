@@ -1,0 +1,27 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Store Data</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Store Name</th>
+            <th>Store Phone Number</th>
+          </tr>   
+        </thead>
+        <tbody >
+          <tr *ngFor="let s of store | async">
+            <td>{{ s.storeName }}</td>
+            <td>{{ s.storePhone }}</td>
+            <td>
+              <button (click)="goToDetail(s.id)" class="btn btn-outline-info" style="margin-right: 10px;">Detail</button>
+              <button (click)="goToEdit(s.id)" class="btn btn-outline-warning"style="margin-right: 10px;">Edit</button>
+              <button (click)="deleteStore(s.id)" class="btn btn-outline-danger">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+

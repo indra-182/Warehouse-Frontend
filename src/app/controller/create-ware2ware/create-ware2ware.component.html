@@ -1,0 +1,32 @@
+<h3>Warehouse to Warehouse</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="submit()">
+    <div class="form-group">
+      <label>From</label>
+      <select class="form-control" [(ngModel)]="trans.idFrom" name="idFrom" required>
+        <option *ngFor="let w of warehouse" [ngValue]="w.id">{{w.warehouseName}}</option>
+      </select>
+      <!--<p>{{ selected }}</p>-->
+    </div>
+    <div class="form-group">
+      <label>Goods</label>
+      <select class="form-control" [(ngModel)]="trans.goodsId" name="goodsId" required>
+        <option *ngFor="let g of goods" [ngValue]="g.id">{{g.goodsName}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>To</label>
+      <select class="form-control" [(ngModel)]="trans.idTo" name="idTo" required>
+        <option *ngFor="let w of warehouse" [ngValue]="w.id">{{w.warehouseName}}</option>
+      </select>
+      <!--<p>{{ selected }}</p>-->
+    </div>
+    <div class="form-group">
+      <label>Quantity</label>
+      <input type="text" class="form-control" name="goodsQuantity" [(ngModel)]="trans.goodsQuantity" required>
+    </div>
+    <br>
+    <button  type="submit" class="btn btn-outline-success" >Add</button>
+  </form>
+</div>
+
